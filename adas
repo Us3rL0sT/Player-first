@@ -1,0 +1,108 @@
+[33mcommit 70432d4b6c1b44426b8d5191357a7556e0a970d0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: DSADAassa sadasdsa <akshencev04@mail.ru>
+Date:   Sat Jan 27 15:27:16 2024 +0300
+
+    first commit
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aa724b7[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m*.iml[m
+[32m+[m[32m.gradle[m
+[32m+[m[32m/local.properties[m
+[32m+[m[32m/.idea/caches[m
+[32m+[m[32m/.idea/libraries[m
+[32m+[m[32m/.idea/modules.xml[m
+[32m+[m[32m/.idea/workspace.xml[m
+[32m+[m[32m/.idea/navEditor.xml[m
+[32m+[m[32m/.idea/assetWizardSettings.xml[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32m/build[m
+[32m+[m[32m/captures[m
+[32m+[m[32m.externalNativeBuild[m
+[32m+[m[32m.cxx[m
+[32m+[m[32mlocal.properties[m
+[1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..94a25f7[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/vcs.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="VcsDirectoryMappings">[m
+[32m+[m[32m    <mapping directory="$PROJECT_DIR$" vcs="Git" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fa209f9[m
+Binary files /dev/null and b/README.md differ
+[1mdiff --git a/app-debug.apk b/app-debug.apk[m
+[1mnew file mode 100644[m
+[1mindex 0000000..57be452[m
+Binary files /dev/null and b/app-debug.apk differ
+[1mdiff --git a/app/.gitignore b/app/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..42afabf[m
+[1m--- /dev/null[m
+[1m+++ b/app/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m/build[m
+\ No newline at end of file[m
+[1mdiff --git a/app/build.gradle.kts b/app/build.gradle.kts[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2f97e59[m
+[1m--- /dev/null[m
+[1m+++ b/app/build.gradle.kts[m
+[36m@@ -0,0 +1,47 @@[m
+[32m+[m[32mplugins {[m
+[32m+[m[32m    id("com.android.application")[m
+[32m+[m[32m    id("org.jetbrains.kotlin.android")[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mandroid {[m
+[32m+[m[32m    namespace = "com.aston.player"[m
+[32m+[m[32m    compileSdk = 34[m
+[32m+[m
+[32m+[m[32m    defaultConfig {[m
+[32m+[m[32m        applicationId = "com.aston.player"[m
+[32m+[m[32m        minSdk = 24[m
+[32m+[m[32m        targetSdk = 34[m
+[32m+[m[32m        versionCode = 1[m
+[32m+[m[32m        versionName = "1.0"[m
+[32m+[m
+[32m+[m[32m        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    buildTypes {[m
+[32m+[m[32m        release {[m
+[32m+[m[32m            isMinifyEnabled = false[m
+[32m+[m[32m            proguardFiles([m
+[32m+[m[32m                getDefaultProguardFile("proguard-android-optimize.txt"),[m
+[32m+[m[32m                "proguard-rules.pro"[m
+[32m+[m[32m            )[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m    compileOptions {[m
+[32m+[m[32m        sourceCompatibility = JavaVersion.VERSION_1_8[m
+[32m+[m[32m        targetCompatibility = JavaVersion.VERSION_1_8[m
+[32m+[m[32m    }[m
+[32m+[m[32m    kotlinOptions {[m
+[32m+[m[32m        jvmTarget = "1.8"[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mdependencies {[m
+[32m+[m
+[32m+[m[32m    implementation("androidx.core:core-ktx:1.12.0")[m
+[32m+[m[32m    implementation("androidx.appcompat:appcompat:1.6.1")[m
+[32m+[m[32m    implementation("com.google.android.material:material:1.11.0")[m
+[32m+[m[32m    implementation("androidx.constraintlayout:constraintlayout:2.1.4")[m
+[32m+[m[32m    testImplementation("junit:junit:4.13.2")[m
+[32m+[m[32m    androidTestImplementation("androidx.test.ext:junit:1.1.5")[m
+[32m+[m[32m    androidTestImplementation("android
